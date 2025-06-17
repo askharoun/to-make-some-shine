@@ -1,10 +1,12 @@
 
 // DOM Elements
 const openModalBtn = document.getElementById('openModal');
+const navCTA = document.getElementById('navCTA');
 const closeModalBtn = document.getElementById('closeModal');
 const modalOverlay = document.getElementById('modalOverlay');
 const modalContainer = document.getElementById('modalContainer');
 const contactForm = document.getElementById('contactForm');
+const selectedPlanInput = document.getElementById('selectedPlan');
 
 // Modal functionality
 function openModal() {
@@ -17,17 +19,24 @@ function openModal() {
     }, 300);
 }
 
+function openModalWithPlan(plan) {
+    selectedPlanInput.value = plan;
+    openModal();
+}
+
 function closeModal() {
     modalOverlay.classList.remove('active');
     document.body.style.overflow = '';
     
     // Reset form when closing
     contactForm.reset();
+    selectedPlanInput.value = '';
     removeSuccessMessage();
 }
 
 // Event listeners
 openModalBtn.addEventListener('click', openModal);
+navCTA.addEventListener('click', openModal);
 closeModalBtn.addEventListener('click', closeModal);
 
 // Close modal when clicking outside
@@ -42,6 +51,50 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
         closeModal();
     }
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+            const navHeight = document.querySelector('.navbar').offsetHeight;
+            const targetPosition = targetElement.offsetTop - navHeight;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+            
+            // Update active link
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        }
+    });
+});
+
+// Update active navigation on scroll
+window.addEventListener('scroll', () => {
+    const sections = ['home', 'services', 'pricing'];
+    const navHeight = document.querySelector('.navbar').offsetHeight;
+    
+    sections.forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        const link = document.querySelector(`[href="#${sectionId}"]`);
+        
+        if (section && link) {
+            const sectionTop = section.offsetTop - navHeight - 100;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            
+            if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+            }
+        }
+    });
 });
 
 // Form submission
@@ -66,6 +119,7 @@ contactForm.addEventListener('submit', async (e) => {
         if (response.ok) {
             showSuccessMessage();
             contactForm.reset();
+            selectedPlanInput.value = '';
         } else {
             throw new Error('Form submission failed');
         }
@@ -104,9 +158,9 @@ function showErrorMessage() {
     
     const errorMessage = document.createElement('div');
     errorMessage.className = 'form-success';
-    errorMessage.style.background = '#f8d7da';
-    errorMessage.style.color = '#721c24';
-    errorMessage.style.borderColor = '#f5c6cb';
+    errorMessage.style.background = '#fee2e2';
+    errorMessage.style.color = '#991b1b';
+    errorMessage.style.borderColor = '#fecaca';
     errorMessage.innerHTML = `
         <strong>Error!</strong> There was a problem sending your message. Please try again.
     `;
@@ -190,31 +244,32 @@ function clearFieldError(e) {
     }
 }
 
-// Smooth scroll and page load animations
+// Page load animations
 window.addEventListener('load', () => {
     document.body.style.opacity = '1';
 });
 
-// Add some interactive enhancements
+// Add interactive enhancements
 document.addEventListener('DOMContentLoaded', () => {
-    // Add hover effect to CTA button
-    const ctaButton = document.getElementById('openModal');
+    // Add animation observer for service cards
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
     
-    ctaButton.addEventListener('mouseenter', () => {
-        ctaButton.style.transform = 'translateY(-3px) scale(1.02)';
-    });
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
+            }
+        });
+    }, observerOptions);
     
-    ctaButton.addEventListener('mouseleave', () => {
-        ctaButton.style.transform = '';
-    });
-    
-    // Add subtle animation to modal container on hover
-    modalContainer.addEventListener('mouseenter', () => {
-        modalContainer.style.transform = 'scale(1.01) translateY(-2px)';
-    });
-    
-    modalContainer.addEventListener('mouseleave', () => {
-        modalContainer.style.transform = '';
+    // Observe service cards and pricing cards
+    document.querySelectorAll('.service-card, .pricing-card').forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        observer.observe(card);
     });
 });
 

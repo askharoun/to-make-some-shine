@@ -12,17 +12,125 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h3>ToMakeSome</h3>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="nav-cta" id="navCTA">Get My Site</button>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <main class="hero-container">
+    <main class="hero-container" id="home">
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="hero-title">ToMakeSome</h1>
-                <p class="hero-subtitle">Affordable, Beautiful Websites for Any Business.</p>
-                <p class="hero-description">Transform your business with a professional website that drives results. No hidden fees, no complicated process - just beautiful, functional websites that work.</p>
-                <button class="cta-button" id="openModal">Make Me a Website</button>
+                <p class="hero-subtitle">Affordable, beautiful websites — built by two guys who <em>get</em> small business</p>
+                <p class="hero-description">Modern, professional websites delivered in days, not weeks. Starting at under $500, we help small businesses worldwide establish their online presence without breaking the bank.</p>
+                <div class="hero-buttons">
+                    <button class="cta-button primary" id="openModal">View Pricing</button>
+                    <button class="cta-button secondary">See Our Work</button>
+                </div>
             </div>
         </div>
     </main>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Everything you need to get your business online</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Custom Design</h3>
+                    <p>Beautiful, modern websites tailored to your brand and business needs.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Mobile Responsive</h3>
+                    <p>Your site will look perfect on all devices - phone, tablet, and desktop.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Fast Delivery</h3>
+                    <p>Get your website live in days, not weeks. We move fast so you can too.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Easy Updates</h3>
+                    <p>Simple content management so you can update your site anytime.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>SEO Ready</h3>
+                    <p>Built with search engines in mind to help customers find you online.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💬</div>
+                    <h3>Ongoing Support</h3>
+                    <p>We're here to help even after your site goes live. No extra charges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            <p class="section-subtitle">No hidden fees. No complicated packages. Just great websites at fair prices.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$299</div>
+                    <ul class="features">
+                        <li>✓ 3-5 Page Website</li>
+                        <li>✓ Mobile Responsive</li>
+                        <li>✓ Contact Forms</li>
+                        <li>✓ Basic SEO Setup</li>
+                        <li>✓ 1 Month Support</li>
+                    </ul>
+                    <button class="pricing-btn" onclick="openModalWithPlan('Starter')">Get Started</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Professional</h3>
+                    <div class="price">$499</div>
+                    <ul class="features">
+                        <li>✓ Up to 10 Pages</li>
+                        <li>✓ Custom Design</li>
+                        <li>✓ Advanced SEO</li>
+                        <li>✓ Social Media Integration</li>
+                        <li>✓ 3 Months Support</li>
+                        <li>✓ Content Management</li>
+                    </ul>
+                    <button class="pricing-btn" onclick="openModalWithPlan('Professional')">Get Started</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">$799</div>
+                    <ul class="features">
+                        <li>✓ Unlimited Pages</li>
+                        <li>✓ E-commerce Ready</li>
+                        <li>✓ Custom Features</li>
+                        <li>✓ Priority Support</li>
+                        <li>✓ 6 Months Support</li>
+                        <li>✓ Training Included</li>
+                    </ul>
+                    <button class="pricing-btn" onclick="openModalWithPlan('Enterprise')">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Modal Overlay -->
     <div class="modal-overlay" id="modalOverlay">
@@ -36,6 +144,7 @@
                 <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contactForm">
                     <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
                     <input type="hidden" name="subject" value="New Website Request from ToMakeSome">
+                    <input type="hidden" name="selected_plan" id="selectedPlan" value="">
                     
                     <div class="form-group">
                         <label for="name">Full Name *</label>
