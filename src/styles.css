@@ -250,7 +250,7 @@ body {
     line-height: 1.6;
 }
 
-/* Pricing Section */
+/* Pricing Section - OPTIMIZED FOR SMOOTH ANIMATIONS */
 .pricing-section {
     padding: 6rem 0;
     background: #1f2937;
@@ -278,18 +278,19 @@ body {
     background: white;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
     position: relative;
     border: 2px solid transparent;
     display: flex;
     flex-direction: column;
     height: 100%;
+    will-change: transform;
 }
 
 .pricing-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
 .pricing-card-featured {
@@ -304,14 +305,15 @@ body {
 
 .pricing-badge {
     position: absolute;
-    top: -1px;
+    top: -2px;
     left: 50%;
     transform: translateX(-50%);
     background: linear-gradient(135deg, #10b981 0%, #059669 100%);
     color: white;
-    padding: 0.5rem 2rem;
+    padding: 0.6rem 2rem;
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 700;
+    border-radius: 0 0 15px 15px;
     box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
     z-index: 10;
 }
@@ -327,7 +329,7 @@ body {
 }
 
 .pricing-plan-name {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: #1f2937;
     margin-bottom: 1rem;
@@ -402,7 +404,7 @@ body {
     border-radius: 12px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.15s ease;
     font-size: 1rem;
     box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
 }
