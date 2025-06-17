@@ -89,180 +89,50 @@
             <h2 class="section-title">Simple, Transparent Pricing</h2>
             <p class="section-subtitle">No hidden fees. No complicated packages. Just great websites at fair prices.</p>
             
-            <div class="pricing-cards-container">
+            <div class="pricing-grid">
                 <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Starter</h3>
-                        <div class="price">$299</div>
-                        <button class="pricing-btn" onclick="openModalWithPlan('Starter')">Get Started</button>
-                    </div>
-                    <div class="pricing-features">
-                        <div class="feature-item">
-                            <span class="feature-label">Pages Included</span>
-                            <span class="feature-value">3-5 Pages</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Mobile Responsive</span>
-                            <span class="feature-value check">✓</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Contact Forms</span>
-                            <span class="feature-value check">✓</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Custom Design</span>
-                            <span class="feature-value cross">✗</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">SEO Setup</span>
-                            <span class="feature-value">Basic</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Social Media Integration</span>
-                            <span class="feature-value cross">✗</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Content Management</span>
-                            <span class="feature-value cross">✗</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">E-commerce Ready</span>
-                            <span class="feature-value cross">✗</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Custom Features</span>
-                            <span class="feature-value cross">✗</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Support Duration</span>
-                            <span class="feature-value">1 Month</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Priority Support</span>
-                            <span class="feature-value cross">✗</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Training Included</span>
-                            <span class="feature-value cross">✗</span>
-                        </div>
-                    </div>
+                    <div class="pricing-plan-name">Starter</div>
+                    <div class="pricing-price">$299</div>
+                    <div class="pricing-description">Perfect for small businesses getting started online</div>
+                    <ul class="pricing-features">
+                        <li>3-5 Pages</li>
+                        <li>Mobile Responsive</li>
+                        <li>Contact Forms</li>
+                        <li>Basic SEO Setup</li>
+                        <li>1 Month Support</li>
+                    </ul>
+                    <button class="pricing-button" onclick="openModalWithPlan('Starter')">Get Started</button>
                 </div>
 
-                <div class="pricing-card featured">
-                    <div class="popular-badge">Most Popular</div>
-                    <div class="pricing-header">
-                        <h3>Professional</h3>
-                        <div class="price">$499</div>
-                        <button class="pricing-btn" onclick="openModalWithPlan('Professional')">Get Started</button>
-                    </div>
-                    <div class="pricing-features">
-                        <div class="feature-item">
-                            <span class="feature-label">Pages Included</span>
-                            <span class="feature-value">Up to 10 Pages</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Mobile Responsive</span>
-                            <span class="feature-value check">✓</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Contact Forms</span>
-                            <span class="feature-value check">✓</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Custom Design</span>
-                            <span class="feature-value check">✓</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">SEO Setup</span>
-                            <span class="feature-value">Advanced</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Social Media Integration</span>
-                            <span class="feature-value check">✓</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Content Management</span>
-                            <span class="feature-value check">✓</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">E-commerce Ready</span>
-                            <span class="feature-value cross">✗</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Custom Features</span>
-                            <span class="feature-value cross">✗</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Support Duration</span>
-                            <span class="feature-value">3 Months</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Priority Support</span>
-                            <span class="feature-value cross">✗</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Training Included</span>
-                            <span class="feature-value cross">✗</span>
-                        </div>
-                    </div>
+                <div class="pricing-card pricing-card-featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-plan-name">Professional</div>
+                    <div class="pricing-price">$499</div>
+                    <div class="pricing-description">Most popular choice for growing businesses</div>
+                    <ul class="pricing-features">
+                        <li>Up to 10 Pages</li>
+                        <li>Custom Design</li>
+                        <li>Advanced SEO</li>
+                        <li>Social Media Integration</li>
+                        <li>Content Management</li>
+                        <li>3 Months Support</li>
+                    </ul>
+                    <button class="pricing-button" onclick="openModalWithPlan('Professional')">Get Started</button>
                 </div>
 
                 <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Enterprise</h3>
-                        <div class="price">$799</div>
-                        <button class="pricing-btn" onclick="openModalWithPlan('Enterprise')">Get Started</button>
-                    </div>
-                    <div class="pricing-features">
-                        <div class="feature-item">
-                            <span class="feature-label">Pages Included</span>
-                            <span class="feature-value">Unlimited Pages</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Mobile Responsive</span>
-                            <span class="feature-value check">✓</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Contact Forms</span>
-                            <span class="feature-value check">✓</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Custom Design</span>
-                            <span class="feature-value check">✓</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">SEO Setup</span>
-                            <span class="feature-value">Advanced</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Social Media Integration</span>
-                            <span class="feature-value check">✓</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Content Management</span>
-                            <span class="feature-value check">✓</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">E-commerce Ready</span>
-                            <span class="feature-value check">✓</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Custom Features</span>
-                            <span class="feature-value check">✓</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Support Duration</span>
-                            <span class="feature-value">6 Months</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Priority Support</span>
-                            <span class="feature-value check">✓</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-label">Training Included</span>
-                            <span class="feature-value check">✓</span>
-                        </div>
-                    </div>
+                    <div class="pricing-plan-name">Enterprise</div>
+                    <div class="pricing-price">$799</div>
+                    <div class="pricing-description">Complete solution for established businesses</div>
+                    <ul class="pricing-features">
+                        <li>Unlimited Pages</li>
+                        <li>E-commerce Ready</li>
+                        <li>Custom Features</li>
+                        <li>Priority Support</li>
+                        <li>Training Included</li>
+                        <li>6 Months Support</li>
+                    </ul>
+                    <button class="pricing-button" onclick="openModalWithPlan('Enterprise')">Get Started</button>
                 </div>
             </div>
         </div>
@@ -286,7 +156,7 @@
             </div>
             <div class="modal-body">
                 <p class="modal-description">Tell us about your business and we'll create the perfect website for you.</p>
-                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contactForm" novalidate>
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contactForm">
                     <!-- Replace with your Access Key -->
                     <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
                     <input type="hidden" name="subject" value="New Website Request from ToMakeSome">
@@ -294,17 +164,17 @@
                     
                     <div class="form-group">
                         <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required placeholder="Enter your full name" minlength="2" pattern="[A-Za-z\s]{2,}">
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
                     </div>
                     
                     <div class="form-group">
                         <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="Enter your email address">
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
                     </div>
                     
                     <div class="form-group">
                         <label for="message">Tell us about your business *</label>
-                        <textarea id="message" name="message" required placeholder="Describe your business, what you do, and what kind of website you need..." rows="5" minlength="10"></textarea>
+                        <textarea id="message" name="message" required placeholder="Describe your business, what you do, and what kind of website you need..." rows="5"></textarea>
                     </div>
                     
                     <!-- Honeypot Spam Protection -->
@@ -389,6 +259,137 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Modal functionality
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modalContainer = document.getElementById('modalContainer');
+        const closeModal = document.getElementById('closeModal');
+        const openModalButtons = [
+            document.getElementById('openModal'),
+            document.getElementById('navCTA'),
+            document.getElementById('contactCTA')
+        ];
+
+        // Open modal
+        openModalButtons.forEach(button => {
+            if (button) {
+                button.addEventListener('click', () => {
+                    modalOverlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
+        });
+
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Close modal when clicking outside
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                modalOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Open modal with specific plan
+        function openModalWithPlan(plan) {
+            document.getElementById('selectedPlan').value = plan;
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Form validation and submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // Validate all fields are filled
+            if (!name || !email || !message) {
+                alert('Please fill out all required fields.');
+                return;
+            }
+            
+            // Validate name (at least 2 characters)
+            if (name.length < 2) {
+                alert('Please enter a valid name (at least 2 characters).');
+                return;
+            }
+            
+            // Validate email format (must contain @ and a dot after @)
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address (example: user@domain.com).');
+                return;
+            }
+            
+            // Validate message (at least 10 characters)
+            if (message.length < 10) {
+                alert('Please provide more details about your business (at least 10 characters).');
+                return;
+            }
+            
+            // If all validation passes, submit the form
+            this.submit();
+        });
+
+        // Privacy Policy
+        function showPrivacyPolicy(event) {
+            event.preventDefault();
+            document.getElementById('privacyModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePrivacyPolicy() {
+            document.getElementById('privacyModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Terms of Service
+        function showTermsOfService(event) {
+            event.preventDefault();
+            document.getElementById('termsModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeTermsOfService() {
+            document.getElementById('termsModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close modals when clicking outside
+        document.getElementById('privacyModal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('privacyModal')) {
+                closePrivacyPolicy();
+            }
+        });
+
+        document.getElementById('termsModal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('termsModal')) {
+                closeTermsOfService();
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
