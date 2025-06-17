@@ -132,6 +132,15 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Ready to Get Started?</h2>
+            <p class="section-subtitle">Let's discuss your project and build something amazing together</p>
+            <button class="cta-button primary large" id="contactCTA">Start Your Project</button>
+        </div>
+    </section>
+
     <!-- Modal Overlay -->
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal-container" id="modalContainer">
@@ -162,14 +171,82 @@
                     </div>
                     
                     <button type="submit" class="submit-button">Send My Request</button>
+                    
+                    <div class="form-disclaimer">
+                        <p>By submitting this form, you agree to our <a href="#" onclick="showPrivacyPolicy(event)">Privacy Policy</a> and <a href="#" onclick="showTermsOfService(event)">Terms of Service</a>.</p>
+                    </div>
                 </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div class="modal-overlay" id="privacyModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Privacy Policy</h2>
+                <button class="close-button" onclick="closePrivacyPolicy()">&times;</button>
+            </div>
+            <div class="modal-body legal-content">
+                <h3>Information We Collect</h3>
+                <p>We collect information you provide directly to us, such as when you fill out our contact form or communicate with us via email.</p>
+                
+                <h3>How We Use Your Information</h3>
+                <p>We use the information we collect to:</p>
+                <ul>
+                    <li>Respond to your inquiries and provide customer service</li>
+                    <li>Develop and deliver our website services</li>
+                    <li>Communicate with you about our services</li>
+                </ul>
+                
+                <h3>Information Sharing</h3>
+                <p>We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.</p>
+                
+                <h3>Contact Us</h3>
+                <p>If you have any questions about this Privacy Policy, please contact us through our website contact form.</p>
+                
+                <p><strong>Last updated:</strong> January 2025</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Service Modal -->
+    <div class="modal-overlay" id="termsModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Terms of Service</h2>
+                <button class="close-button" onclick="closeTermsOfService()">&times;</button>
+            </div>
+            <div class="modal-body legal-content">
+                <h3>Service Description</h3>
+                <p>ToMakeSome provides website development services for small businesses. Our services include website design, development, and basic ongoing support.</p>
+                
+                <h3>Payment Terms</h3>
+                <p>Payment is required before work begins. We accept payment via bank transfer or other agreed-upon methods. Prices are as quoted and may vary based on project requirements.</p>
+                
+                <h3>Project Timeline</h3>
+                <p>We aim to complete projects within the timeframe discussed during initial consultation. Timeline may vary based on project complexity and client responsiveness.</p>
+                
+                <h3>Refund Policy</h3>
+                <p>Refunds are considered on a case-by-case basis. We strive to ensure client satisfaction and will work to resolve any issues before considering refunds.</p>
+                
+                <h3>Limitation of Liability</h3>
+                <p>ToMakeSome's liability is limited to the amount paid for our services. We are not responsible for any indirect or consequential damages.</p>
+                
+                <p><strong>Last updated:</strong> January 2025</p>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 ToMakeSome. All rights reserved.</p>
+        <div class="footer-content">
+            <p>&copy; 2025 ToMakeSome. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" onclick="showPrivacyPolicy(event)">Privacy Policy</a>
+                <a href="#" onclick="showTermsOfService(event)">Terms of Service</a>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>

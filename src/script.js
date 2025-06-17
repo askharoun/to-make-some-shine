@@ -1,12 +1,14 @@
-
 // DOM Elements
 const openModalBtn = document.getElementById('openModal');
 const navCTA = document.getElementById('navCTA');
+const contactCTA = document.getElementById('contactCTA');
 const closeModalBtn = document.getElementById('closeModal');
 const modalOverlay = document.getElementById('modalOverlay');
 const modalContainer = document.getElementById('modalContainer');
 const contactForm = document.getElementById('contactForm');
 const selectedPlanInput = document.getElementById('selectedPlan');
+const privacyModal = document.getElementById('privacyModal');
+const termsModal = document.getElementById('termsModal');
 
 // Modal functionality
 function openModal() {
@@ -34,9 +36,33 @@ function closeModal() {
     removeSuccessMessage();
 }
 
+// Legal modal functions
+function showPrivacyPolicy(e) {
+    e.preventDefault();
+    privacyModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closePrivacyPolicy() {
+    privacyModal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function showTermsOfService(e) {
+    e.preventDefault();
+    termsModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeTermsOfService() {
+    termsModal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
 // Event listeners
 openModalBtn.addEventListener('click', openModal);
 navCTA.addEventListener('click', openModal);
+contactCTA.addEventListener('click', openModal);
 closeModalBtn.addEventListener('click', closeModal);
 
 // Close modal when clicking outside
@@ -46,10 +72,30 @@ modalOverlay.addEventListener('click', (e) => {
     }
 });
 
+privacyModal.addEventListener('click', (e) => {
+    if (e.target === privacyModal) {
+        closePrivacyPolicy();
+    }
+});
+
+termsModal.addEventListener('click', (e) => {
+    if (e.target === termsModal) {
+        closeTermsOfService();
+    }
+});
+
 // Close modal with Escape key
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
-        closeModal();
+    if (e.key === 'Escape') {
+        if (modalOverlay.classList.contains('active')) {
+            closeModal();
+        }
+        if (privacyModal.classList.contains('active')) {
+            closePrivacyPolicy();
+        }
+        if (termsModal.classList.contains('active')) {
+            closeTermsOfService();
+        }
     }
 });
 
