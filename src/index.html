@@ -88,46 +88,111 @@
         <div class="container">
             <h2 class="section-title">Simple, Transparent Pricing</h2>
             <p class="section-subtitle">No hidden fees. No complicated packages. Just great websites at fair prices.</p>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Starter</h3>
-                    <div class="price">$299</div>
-                    <ul class="features">
-                        <li>✓ 3-5 Page Website</li>
-                        <li>✓ Mobile Responsive</li>
-                        <li>✓ Contact Forms</li>
-                        <li>✓ Basic SEO Setup</li>
-                        <li>✓ 1 Month Support</li>
-                    </ul>
-                    <button class="pricing-btn" onclick="openModalWithPlan('Starter')">Get Started</button>
-                </div>
-                <div class="pricing-card featured">
-                    <div class="popular-badge">Most Popular</div>
-                    <h3>Professional</h3>
-                    <div class="price">$499</div>
-                    <ul class="features">
-                        <li>✓ Up to 10 Pages</li>
-                        <li>✓ Custom Design</li>
-                        <li>✓ Advanced SEO</li>
-                        <li>✓ Social Media Integration</li>
-                        <li>✓ 3 Months Support</li>
-                        <li>✓ Content Management</li>
-                    </ul>
-                    <button class="pricing-btn" onclick="openModalWithPlan('Professional')">Get Started</button>
-                </div>
-                <div class="pricing-card">
-                    <h3>Enterprise</h3>
-                    <div class="price">$799</div>
-                    <ul class="features">
-                        <li>✓ Unlimited Pages</li>
-                        <li>✓ E-commerce Ready</li>
-                        <li>✓ Custom Features</li>
-                        <li>✓ Priority Support</li>
-                        <li>✓ 6 Months Support</li>
-                        <li>✓ Training Included</li>
-                    </ul>
-                    <button class="pricing-btn" onclick="openModalWithPlan('Enterprise')">Get Started</button>
-                </div>
+            
+            <div class="pricing-table-container">
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th class="feature-column">Features</th>
+                            <th class="plan-column">
+                                <div class="plan-header">
+                                    <h3>Starter</h3>
+                                    <div class="price">$299</div>
+                                    <button class="pricing-btn" onclick="openModalWithPlan('Starter')">Get Started</button>
+                                </div>
+                            </th>
+                            <th class="plan-column featured-plan">
+                                <div class="plan-header">
+                                    <div class="popular-badge">Most Popular</div>
+                                    <h3>Professional</h3>
+                                    <div class="price">$499</div>
+                                    <button class="pricing-btn" onclick="openModalWithPlan('Professional')">Get Started</button>
+                                </div>
+                            </th>
+                            <th class="plan-column">
+                                <div class="plan-header">
+                                    <h3>Enterprise</h3>
+                                    <div class="price">$799</div>
+                                    <button class="pricing-btn" onclick="openModalWithPlan('Enterprise')">Get Started</button>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-name">Pages Included</td>
+                            <td>3-5 Pages</td>
+                            <td>Up to 10 Pages</td>
+                            <td>Unlimited Pages</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Mobile Responsive</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Contact Forms</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Custom Design</td>
+                            <td><span class="cross">✗</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">SEO Setup</td>
+                            <td>Basic</td>
+                            <td>Advanced</td>
+                            <td>Advanced</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Social Media Integration</td>
+                            <td><span class="cross">✗</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Content Management</td>
+                            <td><span class="cross">✗</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">E-commerce Ready</td>
+                            <td><span class="cross">✗</span></td>
+                            <td><span class="cross">✗</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Custom Features</td>
+                            <td><span class="cross">✗</span></td>
+                            <td><span class="cross">✗</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Support Duration</td>
+                            <td>1 Month</td>
+                            <td>3 Months</td>
+                            <td>6 Months</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Priority Support</td>
+                            <td><span class="cross">✗</span></td>
+                            <td><span class="cross">✗</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Training Included</td>
+                            <td><span class="cross">✗</span></td>
+                            <td><span class="cross">✗</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
@@ -163,7 +228,7 @@
                     
                     <div class="form-group">
                         <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                        <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter your email address">
                     </div>
                     
                     <div class="form-group">
