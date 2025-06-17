@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,47 +90,113 @@
             
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <div class="pricing-plan-name">Starter</div>
-                    <div class="pricing-price">$299</div>
-                    <div class="pricing-description">Perfect for small businesses getting started online</div>
-                    <ul class="pricing-features">
-                        <li>3-5 Pages</li>
-                        <li>Mobile Responsive</li>
-                        <li>Contact Forms</li>
-                        <li>Basic SEO Setup</li>
-                        <li>1 Month Support</li>
-                    </ul>
+                    <div class="pricing-header">
+                        <div class="pricing-plan-name">Starter</div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount">299</span>
+                        </div>
+                        <div class="pricing-description">Perfect for getting started online</div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>3-5 Pages</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>Mobile Responsive Design</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>Contact Forms</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>Basic SEO Setup</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>1 Month Support</span>
+                        </div>
+                    </div>
                     <button class="pricing-button" onclick="openModalWithPlan('Starter')">Get Started</button>
                 </div>
 
                 <div class="pricing-card pricing-card-featured">
                     <div class="pricing-badge">Most Popular</div>
-                    <div class="pricing-plan-name">Professional</div>
-                    <div class="pricing-price">$499</div>
-                    <div class="pricing-description">Most popular choice for growing businesses</div>
-                    <ul class="pricing-features">
-                        <li>Up to 10 Pages</li>
-                        <li>Custom Design</li>
-                        <li>Advanced SEO</li>
-                        <li>Social Media Integration</li>
-                        <li>Content Management</li>
-                        <li>3 Months Support</li>
-                    </ul>
-                    <button class="pricing-button" onclick="openModalWithPlan('Professional')">Get Started</button>
+                    <div class="pricing-header">
+                        <div class="pricing-plan-name">Professional</div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount">499</span>
+                        </div>
+                        <div class="pricing-description">Best choice for growing businesses</div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>Up to 10 Pages</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>Custom Brand Design</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>Advanced SEO Optimization</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>Social Media Integration</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>Content Management System</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>3 Months Support</span>
+                        </div>
+                    </div>
+                    <button class="pricing-button featured-button" onclick="openModalWithPlan('Professional')">Get Started</button>
                 </div>
 
                 <div class="pricing-card">
-                    <div class="pricing-plan-name">Enterprise</div>
-                    <div class="pricing-price">$799</div>
-                    <div class="pricing-description">Complete solution for established businesses</div>
-                    <ul class="pricing-features">
-                        <li>Unlimited Pages</li>
-                        <li>E-commerce Ready</li>
-                        <li>Custom Features</li>
-                        <li>Priority Support</li>
-                        <li>Training Included</li>
-                        <li>6 Months Support</li>
-                    </ul>
+                    <div class="pricing-header">
+                        <div class="pricing-plan-name">Enterprise</div>
+                        <div class="pricing-price">
+                            <span class="currency">$</span>
+                            <span class="amount">799</span>
+                        </div>
+                        <div class="pricing-description">Complete solution for established businesses</div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>Unlimited Pages</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>E-commerce Ready</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>Custom Features & Integrations</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>Priority Support</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>Team Training Included</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>6 Months Support</span>
+                        </div>
+                    </div>
                     <button class="pricing-button" onclick="openModalWithPlan('Enterprise')">Get Started</button>
                 </div>
             </div>
@@ -156,6 +221,10 @@
             </div>
             <div class="modal-body">
                 <p class="modal-description">Tell us about your business and we'll create the perfect website for you.</p>
+                
+                <!-- Custom Error Message -->
+                <div class="error-message" id="errorMessage" style="display: none;"></div>
+                
                 <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contactForm">
                     <!-- Replace with your Access Key -->
                     <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
@@ -301,11 +370,26 @@
             document.body.style.overflow = 'hidden';
         }
 
+        // Custom error display function
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+            
+            // Auto-hide after 5 seconds
+            setTimeout(() => {
+                errorDiv.style.display = 'none';
+            }, 5000);
+        }
+
         // Form validation and submission
         const contactForm = document.getElementById('contactForm');
         
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
+            
+            // Hide any previous error messages
+            document.getElementById('errorMessage').style.display = 'none';
             
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
@@ -313,26 +397,48 @@
             
             // Validate all fields are filled
             if (!name || !email || !message) {
-                alert('Please fill out all required fields.');
+                showError('Oops! Please fill out all required fields to continue.');
                 return;
             }
             
-            // Validate name (at least 2 characters)
+            // Validate name (at least 2 characters, no numbers)
             if (name.length < 2) {
-                alert('Please enter a valid name (at least 2 characters).');
+                showError('Please enter a valid name (at least 2 characters).');
                 return;
             }
             
-            // Validate email format (must contain @ and a dot after @)
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (/\d/.test(name)) {
+                showError('Your name shouldn\'t contain numbers. Please enter a valid name.');
+                return;
+            }
+            
+            // Enhanced email validation
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             if (!emailRegex.test(email)) {
-                alert('Please enter a valid email address (example: user@domain.com).');
+                showError('Please enter a valid email address (e.g., john@company.com).');
                 return;
             }
             
-            // Validate message (at least 10 characters)
-            if (message.length < 10) {
-                alert('Please provide more details about your business (at least 10 characters).');
+            // Check for common fake emails
+            const commonFakeEmails = ['test@test.com', 'fake@fake.com', 'example@example.com'];
+            if (commonFakeEmails.includes(email.toLowerCase())) {
+                showError('Please provide your real email address so we can contact you.');
+                return;
+            }
+            
+            // Validate message (at least 20 characters)
+            if (message.length < 20) {
+                showError('Please provide more details about your business (at least 20 characters).');
+                return;
+            }
+            
+            // Check for gibberish in message
+            const words = message.toLowerCase().split(/\s+/);
+            const gibberishPattern = /^[a-z]{1,3}$/;
+            const shortWords = words.filter(word => gibberishPattern.test(word));
+            
+            if (shortWords.length > words.length * 0.5) {
+                showError('Please provide a meaningful description of your business needs.');
                 return;
             }
             
