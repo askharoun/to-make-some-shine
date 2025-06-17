@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToMakeSome - Affordable Websites for Any Business</title>
+    <meta name="description" content="Professional, affordable website development for small businesses. Get your beautiful website today!">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <main class="hero-container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">ToMakeSome</h1>
+                <p class="hero-subtitle">Affordable, Beautiful Websites for Any Business.</p>
+                <p class="hero-description">Transform your business with a professional website that drives results. No hidden fees, no complicated process - just beautiful, functional websites that work.</p>
+                <button class="cta-button" id="openModal">Make Me a Website</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-container" id="modalContainer">
+            <div class="modal-header">
+                <h2>Let's Build Your Website</h2>
+                <button class="close-button" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">Tell us about your business and we'll create the perfect website for you.</p>
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <input type="hidden" name="subject" value="New Website Request from ToMakeSome">
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Tell us about your business *</label>
+                        <textarea id="message" name="message" required placeholder="Describe your business, what you do, and what kind of website you need..." rows="5"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Send My Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 ToMakeSome. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
